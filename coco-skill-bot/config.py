@@ -9,12 +9,8 @@ class DefaultConfig:
     """ Bot Configuration """
 
     PORT = 39783
-    APP_ID = os.environ.get(
-        "MicrosoftAppId", ""
-    )
-    APP_PASSWORD = os.environ.get(
-        "MicrosoftAppPassword", ""
-    )
+    APP_ID = os.environ.get("MicrosoftAppId", "")
+    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
 
     # Callers to only those specified, '*' allows any caller.
     # Example: os.environ.get("AllowedCallers", ["aaaaaa-1111-1111-1111-aaaaaaaaaa"])

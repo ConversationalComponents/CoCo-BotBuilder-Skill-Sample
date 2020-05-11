@@ -17,8 +17,9 @@ class CoCoBot(CoCoActivityHandler):
         else:
             self.conversation_state.active_component = turn_context.activity.value
 
-        await self.activate_component(turn_context,
-                                      self.conversation_state.active_component)
+        await self.activate_component(
+            turn_context, self.conversation_state.active_component
+        )
 
         if not self.conversation_state.active_component:
             end_of_conversation = Activity(type=ActivityTypes.end_of_conversation)

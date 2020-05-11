@@ -1,10 +1,6 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-import sys
-import traceback
-from datetime import datetime
-
 from aiohttp import web
 from aiohttp.web import Request, Response
 from botbuilder.schema import Activity
@@ -15,12 +11,8 @@ from config import DefaultConfig
 from authentication import AllowedCallersClaimsValidator
 from adapter_with_error_handler import AdapterWithErrorHandler
 
-from coco_microsoft_bot_framework import CoCoActivityHandler
 from botbuilder.core import (
     BotFrameworkAdapterSettings,
-    TurnContext,
-    BotFrameworkAdapter,
-    UserState,
     MemoryStorage,
     ConversationState,
 )
